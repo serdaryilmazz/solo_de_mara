@@ -258,7 +258,7 @@ function WheelModal({ isOpen, onClose, items }) {
         {/* Modal Header */}
         <div className={styles.header}>
           <span className={styles.subTitle}>Sol de Mara Lezzet Çarkı</span>
-          <h2 className={styles.title}>🎲 Bugün Ne Yesem?</h2>
+          <h2 className={styles.title}>Bugün Ne Yesem? 🎲 </h2>
           <p className={styles.description}>
             Kararsız mı kaldınız? Çarkı çevirin, bugünkü şanslı lezzetinizi keşfedin!
           </p>

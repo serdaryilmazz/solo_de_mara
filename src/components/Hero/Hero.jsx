@@ -27,7 +27,6 @@ function Hero({ name, slogan, welcome, onOpenWheel }) {
             type="button"
             aria-label="Bugün ne yesem çarkını aç"
           >
-            <span className={styles.wheelBtnIcon}>🎲</span>
             <span>Bugün Ne Yesem?</span>
           </button>
         )}
