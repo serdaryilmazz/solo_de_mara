@@ -1,0 +1,174 @@
+/* ===================================
+   Hero — Animations & Keyframes
+   =================================== */
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes contentFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dividerExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+/* ===================================
+   Hero — Layout
+   =================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  min-height: 80dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-dark-brown);
+  padding-top: var(--safe-top);
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 0;
+  animation: heroFadeIn 1.4s ease-out both;
+  user-select: none;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at center, rgba(30, 22, 16, 0.35) 0%, rgba(30, 22, 16, 0.7) 100%),
+    linear-gradient(to bottom, rgba(30, 22, 16, 0.3) 0%, rgba(30, 22, 16, 0.55) 50%, rgba(30, 22, 16, 0.9) 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  max-width: 700px;
+}
+
+/* --- Title --- */
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  animation: contentFadeUp 0.9s ease-out 0.3s both;
+}
+
+/* --- Decorative divider under title --- */
+.titleDivider {
+  display: block;
+  height: 2px;
+  margin: 0 auto var(--spacing-md);
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  border: none;
+  animation: dividerExpand 0.8s ease-out 0.7s both;
+}
+
+/* --- Slogan --- */
+.slogan {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 2.5vw, 1.35rem);
+  color: var(--color-cream);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  animation: contentFadeUp 0.9s ease-out 0.6s both;
+}
+
+/* --- Welcome text --- */
+.welcome {
+  color: var(--color-cream);
+  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.75;
+  opacity: 0.85;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  animation: contentFadeUp 0.9s ease-out 0.9s both;
+}
+
+/* --- Mobile adjustments --- */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 65vh;
+    min-height: 65dvh;
+  }
+
+  .content {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .welcome {
+    max-width: 90vw;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .slogan {
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+  }
+
+  .welcome {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .backgroundImage,
+  .title,
+  .titleDivider,
+  .slogan,
+  .welcome {
+    animation: none;
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "restaurant": {
+    "name": "Sol de Mara",
+    "slogan": "Where Mexico Meets Maraş",
+    "welcome": "Meksika'nın cesur tatları ile Maraş'ın eşsiz lezzetlerini buluşturuyoruz. Taze malzemeler, el yapımı tarifler ve unutulmaz bir deneyim sizi bekliyor."
+  },
+  "categories": [
+    {
+      "id": "burgers",
+      "title": "Burgerler",
+      "items": [
+        {
+          "id": "moonche",
+          "name": "Moonche",
+          "description": "2x60 gr. köfte, tulum peynirli sos, mor soğan turşusu",
+          "price": 100,
+          "image": "moonche_burger.webp"
+        },
+        {
+          "id": "kahraman",
+          "name": "Kahraman",
+          "description": "2x60 gr. köfte, cheddar, el yapımı patlıcanlı mayonez, kibrit patates",
+          "price": 100,
+          "image": "kahraman_burger.webp"
+        },
+        {
+          "id": "enos",
+          "name": "Eno's",
+          "description": "2x60 gr. köfte, füme et, dilim domates, mor soğan turşusu",
+          "price": 100,
+          "image": "enos_burger.webp"
+        },
+        {
+          "id": "sos",
+          "name": "S.O.S",
+          "description": "2x60 gr. köfte, acı biber reçeli, jalapeno turşusu, tulum peyniri, roka",
+          "price": 100,
+          "image": "sos_burger.webp"
+        }
+      ]
+    },
+    {
+      "id": "mexican-street-food",
+      "title": "Meksika Sokak Lezzetleri",
+      "items": [
+        {
+          "id": "burrito",
+          "name": "Burrito",
+          "description": "Yasemin pilavı, kıyma veya tiftiklenmiş tavuk, Meksika fasulyesi, salata, guacamole",
+          "price": 100,
+          "image": "burrito.webp"
+        },
+        {
+          "id": "chimichanga",
+          "name": "Chimichanga",
+          "description": "Kıyma veya tiftiklenmiş tavuk, özel domates sos, peynir, yoğurtlu avokado sos, Meksika salatası",
+          "price": 100,
+          "image": "chimichanga.webp"
+        },
+        {
+          "id": "taco",
+          "name": "Taco",
+          "description": "Özel Taco ekmeği, kıyma veya tiftiklenmiş tavuk, domates, biber, mor soğan, Meksika fasulyesi",
+          "price": 100,
+          "image": "taco.webp"
+        },
+        {
+          "id": "nachos",
+          "name": "Nachos",
+          "description": "Meksika cipsi, kıyma veya tiftiklenmiş tavuk, cheddar sos, Meksika fasulyesi, guacamole, salsa sos",
+          "price": 100,
+          "image": "nachos.webp"
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "title": "Tatlılar",
+      "items": [
+        {
+          "id": "cheesecake",
+          "name": "Sol de Mara Cheesecake",
+          "description": "",
+          "price": 100,
+          "image": "sol_de_mara_cheesecake.webp"
+        },
+        {
+          "id": "arroz-con-leche",
+          "name": "Arroz Con Leche",
+          "subtitle": "Meksika usulü sütlaç",
+          "description": "",
+          "price": 100,
+          "image": "arroz_con_leche.webp"
+        },
+        {
+          "id": "enos-cookie",
+          "name": "Eno's Cookie",
+          "description": "",
+          "price": 100,
+          "image": "enos_cookie.webp"
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "title": "Meşrubatlar",
+      "items": [
+        {
+          "id": "kola",
+          "name": "Kola",
+          "description": "",
+          "price": 100,
+          "image": "kola.webp"
+        },
+        {
+          "id": "fanta",
+          "name": "Fanta",
+          "description": "",
+          "price": 100,
+          "image": "fanta.webp"
+        },
+        {
+          "id": "sprite",
+          "name": "Sprite",
+          "description": "",
+          "price": 100,
+          "image": "sprite.webp"
+        },
+        {
+          "id": "ayran",
+          "name": "El Yapımı Ayran",
+          "description": "",
+          "price": 100,
+          "image": "ayran.webp"
+        },
+        {
+          "id": "limonata-sade",
+          "name": "El Yapımı Limonata",
+          "subtitle": "Sade",
+          "description": "",
+          "price": 100,
+          "image": "limonata.webp"
+        },
+        {
+          "id": "limonata-cilekli",
+          "name": "El Yapımı Limonata",
+          "subtitle": "Çilekli",
+          "description": "",
+          "price": 100,
+          "image": "cilekli_limonata.webp"
+        },
+        {
+          "id": "limonata-karadutlu",
+          "name": "El Yapımı Limonata",
+          "subtitle": "Karadutlu",
+          "description": "",
+          "price": 100,
+          "image": "karadut_limonata.webp"
+        }
+      ]
+    }
+  ]
+}

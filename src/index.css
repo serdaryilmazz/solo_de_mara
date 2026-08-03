@@ -1,0 +1,173 @@
+/* ===================================
+   Sol de Mara — Global Styles & Design Tokens
+   =================================== */
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* Brand Colors */
+  --color-emerald: #23463E;
+  --color-gold: #C99842;
+  --color-gold-light: #D4AB5E;
+  --color-terracotta: #A54A2A;
+  --color-cream: #F4E8D2;
+  --color-dark-brown: #2A1E16;
+
+  /* Semantic Colors */
+  --color-bg: #1A140E;
+  --color-card-bg: #241A12;
+  --color-card-bg-light: #2E2218;
+  --color-text-primary: #F4E8D2;
+  --color-text-secondary: rgba(244, 232, 210, 0.6);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 5rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(201, 152, 66, 0.08);
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Safe areas for notched phones */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior-y: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+}
+
+/* --- Focus styles for keyboard navigation --- */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Selection --- */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-dark-brown);
+}
+
+/* --- Scrollbar (Webkit) --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 152, 66, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 152, 66, 0.5);
+}
+
+/* Firefox scrollbar */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 152, 66, 0.3) var(--color-bg);
+  }
+}
+
+/* --- App Layout --- */
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* --- Touch device optimizations --- */
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover effects on touch devices to prevent sticky hover states */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
