@@ -1,0 +1,120 @@
+/* ===================================
+   CategoryNav — Sticky Filter Pills
+   Mobile-first QR Menu Filter Bar
+   =================================== */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 20, 14, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 152, 66, 0.12);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px var(--spacing-md);
+  min-width: max-content;
+}
+
+/* --- Pill / Chip --- */
+.pill {
+  flex-shrink: 0;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-cream);
+  opacity: 0.5;
+  background: transparent;
+  border: 1px solid rgba(201, 152, 66, 0.18);
+  border-radius: 100px;
+  padding: 9px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    opacity 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Desktop hover */
+.pill:hover {
+  opacity: 0.8;
+  border-color: rgba(201, 152, 66, 0.35);
+}
+
+/* Tap feedback */
+.pill:active {
+  transform: scale(0.94);
+}
+
+/* --- Active State --- */
+.pill.active {
+  opacity: 1;
+  color: var(--color-dark-brown);
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 2px 14px rgba(201, 152, 66, 0.3);
+}
+
+.pill.active:active {
+  transform: scale(1);
+}
+
+/* --- Mobile-first sizing --- */
+@media (max-width: 600px) {
+  .track {
+    padding: 12px var(--spacing-sm);
+    gap: 6px;
+  }
+
+  .pill {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .pill {
+    font-size: 0.75rem;
+    padding: 7px 13px;
+  }
+}
+
+/* --- Focus for keyboard --- */
+.pill:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* --- Touch devices: no sticky hover --- */
+@media (hover: none) and (pointer: coarse) {
+  .pill:hover {
+    opacity: 0.5;
+    border-color: rgba(201, 152, 66, 0.18);
+  }
+
+  .pill.active:hover {
+    opacity: 1;
+    border-color: transparent;
+  }
+}
