@@ -121,11 +121,57 @@
   color: var(--color-cream);
   font-size: clamp(0.85rem, 1.8vw, 1.05rem);
   max-width: 540px;
-  margin: 0 auto;
+  margin: 0 auto var(--spacing-lg);
   line-height: 1.75;
   opacity: 0.85;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
   animation: contentFadeUp 0.9s ease-out 0.9s both;
+}
+
+/* --- Wheel CTA Button --- */
+.wheelBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: var(--color-dark-brown);
+  background: linear-gradient(135deg, var(--color-gold), #E8C175);
+  border: 1px solid rgba(255, 235, 185, 0.5);
+  border-radius: 100px;
+  padding: 12px 28px;
+  cursor: pointer;
+  box-shadow:
+    0 4px 20px rgba(201, 152, 66, 0.35),
+    0 0 30px rgba(201, 152, 66, 0.2);
+  transition: all var(--transition-base);
+  animation: contentFadeUp 0.9s ease-out 1.1s both;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wheelBtn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 8px 30px rgba(201, 152, 66, 0.5),
+    0 0 45px rgba(201, 152, 66, 0.35);
+  background: linear-gradient(135deg, #D4AB5E, var(--color-gold));
+}
+
+.wheelBtn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.wheelBtnIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.wheelBtnSparkle {
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-dark-brown);
 }
 
 /* --- Mobile adjustments --- */

@@ -1,7 +1,7 @@
 import heroImage from '../../assets/solo_de_mara_main.webp';
 import styles from './Hero.module.css';
 
-function Hero({ name, slogan, welcome }) {
+function Hero({ name, slogan, welcome, onOpenWheel }) {
   return (
     <header className={styles.hero} role="banner" aria-label="Sol de Mara restoran hero alanı">
       <img
@@ -18,6 +18,20 @@ function Hero({ name, slogan, welcome }) {
         <span className={styles.titleDivider} aria-hidden="true" />
         <p className={styles.slogan}>{slogan}</p>
         <p className={styles.welcome}>{welcome}</p>
+
+        {/* Bugün Ne Yesem? Button */}
+        {onOpenWheel && (
+          <button
+            className={styles.wheelBtn}
+            onClick={onOpenWheel}
+            type="button"
+            aria-label="Bugün ne yesem çarkını aç"
+          >
+            <span className={styles.wheelBtnIcon}>🎲</span>
+            <span>Bugün Ne Yesem?</span>
+            <span className={styles.wheelBtnSparkle}>✨</span>
+          </button>
+        )}
       </div>
     </header>
   );
