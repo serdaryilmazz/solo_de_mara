@@ -29,7 +29,6 @@ function Hero({ name, slogan, welcome, onOpenWheel }) {
           >
             <span className={styles.wheelBtnIcon}>🎲</span>
             <span>Bugün Ne Yesem?</span>
-            <span className={styles.wheelBtnSparkle}>✨</span>
           </button>
         )}
       </div>
