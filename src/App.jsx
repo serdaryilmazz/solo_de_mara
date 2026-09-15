@@ -11,6 +11,15 @@ function getProductIdFromHash() {
   return new URLSearchParams(window.location.hash.slice(1)).get('product');
 }
 
+function runPageTransition(update) {
+  if (typeof document.startViewTransition === 'function') {
+    document.startViewTransition(update);
+    return;
+  }
+
+  update();
+}
+
 function App() {
   const { restaurant, categories } = menuData;
 
@@ -27,7 +36,9 @@ function App() {
   );
 
   useEffect(() => {
-    const syncProductFromUrl = () => setSelectedProductId(getProductIdFromHash());
+    const syncProductFromUrl = () => {
+      runPageTransition(() => setSelectedProductId(getProductIdFromHash()));
+    };
     window.addEventListener('hashchange', syncProductFromUrl);
     return () => window.removeEventListener('hashchange', syncProductFromUrl);
   }, []);
