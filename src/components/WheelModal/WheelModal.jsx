@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef, useTransition } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { getImagePath } from '../../utils/imageMap';
+import { formatItemPrice } from '../../utils/formatPrice';
 import styles from './WheelModal.module.css';
 
 // Colors for wheel slices
@@ -120,6 +121,8 @@ function WheelModal({ isOpen, onClose, items }) {
   // Redraw when modal opens or items change
   useEffect(() => {
     if (isOpen) {
+      // Reset the modal only when its parent starts a fresh open session.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShowResult(false);
       setSelectedItem(null);
       setIsSpinning(false);
@@ -130,6 +133,8 @@ function WheelModal({ isOpen, onClose, items }) {
         cancelAnimationFrame(animationFrameRef.current);
       }
     }
+    // drawWheel intentionally uses the current render's item list.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, items]);
 
   /**
@@ -313,7 +318,7 @@ function WheelModal({ isOpen, onClose, items }) {
                 <p className={styles.resultDescription}>{selectedItem.description}</p>
               )}
 
-              <div className={styles.resultPrice}>{selectedItem.price} TL</div>
+              <div className={styles.resultPrice}>{formatItemPrice(selectedItem)}</div>
 
               <div className={styles.resultActions}>
                 <button

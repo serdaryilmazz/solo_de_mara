@@ -12,29 +12,44 @@
         {
           "id": "moonche",
           "name": "Moonche",
-          "description": "2x60 gr. köfte, tulum peynirli sos, mor soğan turşusu",
-          "price": 100,
+          "subtitle": "Hikayemizin burgeri!",
+          "description": "Tereyağlı brioche ekmeği, 120 gr. et veya tavuk, cheddar, tulum peynirli sos ve kırmızı soğan turşusu.",
+          "prices": [
+            { "label": "Et", "amount": 480 },
+            { "label": "Tavuk", "amount": 350 }
+          ],
+          "allergens": ["Gluten", "Süt ürünleri", "Yumurta"],
+          "hasDetailPage": true,
           "image": "moonche_burger.webp"
         },
         {
           "id": "kahraman",
           "name": "Kahraman",
-          "description": "2x60 gr. köfte, cheddar, el yapımı patlıcanlı mayonez, kibrit patates",
-          "price": 100,
+          "subtitle": "Şehrimizden aldığımız ilhamla!",
+          "description": "Tereyağlı brioche ekmeği, 120 gr. et, Maraş parmak peyniri, el yapımı baharatlı patlıcanlı mayonez ve kibrit patates.",
+          "price": 460,
+          "allergens": ["Gluten", "Süt ürünleri", "Yumurta"],
+          "hasDetailPage": true,
           "image": "kahraman_burger.webp"
         },
         {
           "id": "enos",
           "name": "Eno's",
-          "description": "2x60 gr. köfte, füme et, dilim domates, mor soğan turşusu",
-          "price": 100,
+          "subtitle": "Şefin imzası",
+          "description": "Tereyağlı brioche ekmeği, 120 gr. et, cheddar, kahveli BBQ sos, dilim domates, füme et ve soğan turşusu.",
+          "price": 520,
+          "allergens": ["Gluten", "Süt ürünleri", "Yumurta", "Soya"],
+          "hasDetailPage": true,
           "image": "enos_burger.webp"
         },
         {
           "id": "sos",
           "name": "S.O.S",
-          "description": "2x60 gr. köfte, acı biber reçeli, jalapeno turşusu, tulum peyniri, roka",
-          "price": 100,
+          "subtitle": "Acil yardım çağrısına hazır olun!",
+          "description": "Tereyağlı brioche ekmeği, 120 gr. et, cheddar, el yapımı acı biber reçeli, jalapeno biber turşusu, tulum peyniri ve iceberg marul.",
+          "price": 475,
+          "allergens": ["Gluten", "Süt ürünleri", "Yumurta"],
+          "hasDetailPage": true,
           "image": "sos_burger.webp"
         }
       ]
@@ -46,29 +61,50 @@
         {
           "id": "burrito",
           "name": "Burrito",
-          "description": "Yasemin pilavı, kıyma veya tiftiklenmiş tavuk, Meksika fasulyesi, salata, guacamole",
-          "price": 100,
+          "subtitle": "Dev Meksika dürümü",
+          "description": "Tortilla ekmeği, özel baharatlı ve domates soslu tavuk veya et, tereyağlı yasemin pilavı, Meksika fasulyesi ve Meksika salatası. Guacamole ve patates kızartması ile servis edilir.",
+          "prices": [
+            { "label": "120 gr. et", "amount": 450 },
+            { "label": "150 gr. tavuk", "amount": 350 }
+          ],
+          "allergens": ["Gluten", "Süt ürünleri"],
+          "hasDetailPage": true,
           "image": "burrito.webp"
         },
         {
           "id": "chimichanga",
           "name": "Chimichanga",
-          "description": "Kıyma veya tiftiklenmiş tavuk, özel domates sos, peynir, yoğurtlu avokado sos, Meksika salatası",
-          "price": 100,
+          "description": "Tortilla ekmeği; içerisinde özel baharatlı ve domates soslu tiftiklenmiş tavuk veya 120 gr. et, özel peynir; dışında cheddar ve kaşar peyniri, üzerinde Meksika salatası. Guacamole sos ve patates kızartması ile servis edilir.",
+          "prices": [
+            { "label": "120 gr. et", "amount": 450 },
+            { "label": "Tavuk", "amount": 350 }
+          ],
+          "allergens": ["Gluten", "Süt ürünleri"],
+          "hasDetailPage": true,
           "image": "chimichanga.webp"
         },
         {
           "id": "taco",
           "name": "Taco",
-          "description": "Özel Taco ekmeği, kıyma veya tiftiklenmiş tavuk, domates, biber, mor soğan, Meksika fasulyesi",
-          "price": 100,
+          "description": "Mısır unundan yapılan özel kıtır taco ekmeği, özel baharatlı ve domates soslu tiftik tavuk veya et, Meksika fasulyesi ve salata. 3 adet olarak guacamole, ekşi krema ve patates kızartması ile servis edilir.",
+          "prices": [
+            { "label": "120 gr. et", "amount": 450 },
+            { "label": "Tavuk", "amount": 350 }
+          ],
+          "allergens": ["Süt ürünleri"],
+          "hasDetailPage": true,
           "image": "taco.webp"
         },
         {
           "id": "nachos",
           "name": "Nachos",
-          "description": "Meksika cipsi, kıyma veya tiftiklenmiş tavuk, cheddar sos, Meksika fasulyesi, guacamole, salsa sos",
-          "price": 100,
+          "description": "Çıtır Meksika cipsi, et veya tavuk, akışkan cheddar sos, domates, biber, jalapeno biber turşusu, Meksika fasulyesi ve tane mısır. Guacamole ve ekşi krema ile servis edilir.",
+          "prices": [
+            { "label": "120 gr. et", "amount": 450 },
+            { "label": "Tavuk", "amount": 350 }
+          ],
+          "allergens": ["Süt ürünleri"],
+          "hasDetailPage": true,
           "image": "nachos.webp"
         }
       ]
@@ -81,7 +117,7 @@
           "id": "cheesecake",
           "name": "Sol de Mara Cheesecake",
           "description": "",
-          "price": 100,
+          "price": 180,
           "image": "sol_de_mara_cheesecake.webp"
         },
         {
@@ -89,14 +125,14 @@
           "name": "Arroz Con Leche",
           "subtitle": "Meksika usulü sütlaç",
           "description": "",
-          "price": 100,
+          "price": 140,
           "image": "arroz_con_leche.webp"
         },
         {
           "id": "enos-cookie",
           "name": "Eno's Cookie",
           "description": "",
-          "price": 100,
+          "price": 120,
           "image": "enos_cookie.webp"
         }
       ]

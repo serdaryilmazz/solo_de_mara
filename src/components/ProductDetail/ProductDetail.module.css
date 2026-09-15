@@ -1,0 +1,177 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--color-bg);
+}
+
+.topBar {
+  width: min(100%, 1100px);
+  min-height: 72px;
+  margin: 0 auto;
+  padding: calc(var(--spacing-sm) + var(--safe-top)) var(--spacing-lg) var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid rgba(201, 152, 66, 0.28);
+  border-radius: 100px;
+  color: var(--color-cream);
+  font-size: 0.86rem;
+  transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
+}
+
+.backButton:hover {
+  background: rgba(201, 152, 66, 0.14);
+  color: var(--color-gold);
+  transform: translateX(-2px);
+}
+
+.brand {
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.detail {
+  width: min(100% - 32px, 1040px);
+  margin: var(--spacing-sm) auto var(--spacing-2xl);
+  background: var(--color-card-bg);
+  border: 1px solid rgba(201, 152, 66, 0.16);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+}
+
+.imageFrame {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 20, 14, 0.72), transparent 55%);
+}
+
+.category {
+  position: absolute;
+  left: var(--spacing-lg);
+  bottom: var(--spacing-lg);
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content {
+  align-self: center;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.eyebrow {
+  color: var(--color-gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 8px;
+  color: var(--color-cream);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+}
+
+.slogan {
+  margin-top: var(--spacing-sm);
+  color: var(--color-gold-light);
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-style: italic;
+}
+
+.divider {
+  display: block;
+  width: 84px;
+  height: 1px;
+  margin: var(--spacing-md) 0;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.prices, .allergens {
+  margin-top: var(--spacing-xl);
+}
+
+.prices h2, .allergens h2 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  padding: 12px 0;
+  color: var(--color-cream);
+  border-bottom: 1px solid rgba(201, 152, 66, 0.13);
+}
+
+.priceRow strong {
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.allergens {
+  padding: var(--spacing-md);
+  background: rgba(201, 152, 66, 0.07);
+  border-left: 2px solid var(--color-gold);
+}
+
+.allergens p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .topBar { padding-inline: var(--spacing-sm); }
+  .detail { width: min(100% - 20px, 620px); grid-template-columns: 1fr; }
+  .imageFrame { min-height: min(78vw, 420px); }
+  .content { padding: var(--spacing-xl) var(--spacing-md); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backButton { transition: none; }
+}

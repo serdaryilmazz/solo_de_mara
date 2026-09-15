@@ -1,10 +1,15 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import menuData from './data/menu.json';
 import Hero from './components/Hero/Hero';
 import CategoryNav from './components/CategoryNav/CategoryNav';
 import MenuSection from './components/MenuSection/MenuSection';
 import WheelModal from './components/WheelModal/WheelModal';
 import Footer from './components/Footer/Footer';
+import ProductDetail from './components/ProductDetail/ProductDetail';
+
+function getProductIdFromHash() {
+  return new URLSearchParams(window.location.hash.slice(1)).get('product');
+}
 
 function App() {
   const { restaurant, categories } = menuData;
@@ -14,6 +19,18 @@ function App() {
 
   /** State for "Bugün Ne Yesem?" Wheel Modal */
   const [isWheelOpen, setIsWheelOpen] = useState(false);
+  const [selectedProductId, setSelectedProductId] = useState(getProductIdFromHash);
+
+  const allProducts = useMemo(
+    () => categories.flatMap((category) => category.items.map((item) => ({ ...item, category }))),
+    [categories],
+  );
+
+  useEffect(() => {
+    const syncProductFromUrl = () => setSelectedProductId(getProductIdFromHash());
+    window.addEventListener('hashchange', syncProductFromUrl);
+    return () => window.removeEventListener('hashchange', syncProductFromUrl);
+  }, []);
 
   /** Filter categories based on active selection */
   const visibleCategories = activeFilter
@@ -32,6 +49,18 @@ function App() {
     );
     return eligibleCategories.flatMap((cat) => cat.items);
   }, [categories]);
+
+  const selectedProduct = allProducts.find((item) => item.id === selectedProductId && item.hasDetailPage);
+
+  if (selectedProduct) {
+    return (
+      <ProductDetail
+        item={selectedProduct}
+        category={selectedProduct.category}
+        onBack={() => { window.location.hash = ''; }}
+      />
+    );
+  }
 
   return (
     <>
