@@ -19,6 +19,10 @@ for (const path in imageModules) {
  * @returns {string} Resolved image URL
  */
 export function getImagePath(filename) {
+  if (!filename) {
+    return '';
+  }
+
   if (!imageMap[filename]) {
     console.warn(`[imageMap] Image not found: ${filename}`);
     return '';

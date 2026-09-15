@@ -145,28 +145,51 @@
           "id": "kola",
           "name": "Kola",
           "description": "",
-          "price": 100,
+          "price": 115,
           "image": "kola.webp"
         },
         {
           "id": "fanta",
           "name": "Fanta",
           "description": "",
-          "price": 100,
+          "price": 115,
           "image": "fanta.webp"
         },
         {
           "id": "sprite",
           "name": "Sprite",
           "description": "",
-          "price": 100,
+          "price": 115,
           "image": "sprite.webp"
+        },
+        {
+          "id": "ice-tea",
+          "name": "Fusetea",
+          "subtitle": "Şeftali · Limon",
+          "description": "",
+          "price": 115,
+          "image": "fusetea.webp"
+        },
+        {
+          "id": "maltana",
+          "name": "Maltana",
+          "subtitle": "Ananas · Şeftali",
+          "description": "",
+          "price": 90,
+          "image": "maltana.webp"
+        },
+        {
+          "id": "su",
+          "name": "Su",
+          "description": "",
+          "price": 30,
+          "image": "marsu.webp"
         },
         {
           "id": "ayran",
           "name": "El Yapımı Ayran",
           "description": "",
-          "price": 100,
+          "price": 60,
           "image": "ayran.webp"
         },
         {
@@ -174,7 +197,7 @@
           "name": "El Yapımı Limonata",
           "subtitle": "Sade",
           "description": "",
-          "price": 100,
+          "price": 110,
           "image": "limonata.webp"
         },
         {
@@ -182,7 +205,7 @@
           "name": "El Yapımı Limonata",
           "subtitle": "Çilekli",
           "description": "",
-          "price": 100,
+          "price": 110,
           "image": "cilekli_limonata.webp"
         },
         {
@@ -190,7 +213,7 @@
           "name": "El Yapımı Limonata",
           "subtitle": "Karadutlu",
           "description": "",
-          "price": 100,
+          "price": 110,
           "image": "karadut_limonata.webp"
         }
       ]

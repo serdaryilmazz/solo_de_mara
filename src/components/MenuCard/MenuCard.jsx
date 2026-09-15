@@ -27,7 +27,14 @@ function CardContent({ item, imageSrc }) {
   return (
     <>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src={imageSrc} alt={item.name} loading="lazy" decoding="async" draggable="false" />
+        {imageSrc ? (
+          <img className={styles.image} src={imageSrc} alt={item.name} loading="lazy" decoding="async" draggable="false" />
+        ) : (
+          <div className={styles.imageFallback} aria-label={item.name}>
+            <span>Sol de Mara</span>
+            <strong>{item.name}</strong>
+          </div>
+        )}
       </div>
       <div className={styles.body}>
         <h3 className={styles.name}>{item.name}</h3>
