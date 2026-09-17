@@ -179,20 +179,6 @@
           "image": "maltana.webp"
         },
         {
-          "id": "su",
-          "name": "Su",
-          "description": "",
-          "price": 30,
-          "image": "su.webp"
-        },
-        {
-          "id": "ayran",
-          "name": "El Yapımı Ayran",
-          "description": "",
-          "price": 60,
-          "image": "ayran.webp"
-        },
-        {
           "id": "limonata-sade",
           "name": "El Yapımı Limonata",
           "subtitle": "Sade",
@@ -215,6 +201,20 @@
           "description": "",
           "price": 110,
           "image": "karadut_limonata.webp"
+        },
+        {
+          "id": "ayran",
+          "name": "El Yapımı Ayran",
+          "description": "",
+          "price": 60,
+          "image": "ayran.webp"
+        },
+        {
+          "id": "su",
+          "name": "Su",
+          "description": "",
+          "price": 30,
+          "image": "su.webp"
         }
       ]
     }
