@@ -146,7 +146,7 @@
           "name": "Kola",
           "description": "",
           "price": 115,
-          "image": "kola.webp"
+          "image": "cola.webp"
         },
         {
           "id": "fanta",
@@ -183,7 +183,7 @@
           "name": "Su",
           "description": "",
           "price": 30,
-          "image": "marsu.webp"
+          "image": "su.webp"
         },
         {
           "id": "ayran",

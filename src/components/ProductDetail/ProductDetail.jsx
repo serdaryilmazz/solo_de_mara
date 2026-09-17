@@ -19,7 +19,13 @@ function ProductDetail({ item, category, onBack }) {
 
       <article className={styles.detail}>
         <div className={styles.imageFrame}>
-          <img src={getImagePath(item.image)} alt={item.name} className={styles.image} />
+          <img
+            src={getImagePath(item.image)}
+            alt={item.name}
+            className={styles.image}
+            draggable="false"
+            onContextMenu={(event) => event.preventDefault()}
+          />
           <div className={styles.imageOverlay} aria-hidden="true" />
           <span className={styles.category}>{category.title}</span>
         </div>

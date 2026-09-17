@@ -43,6 +43,17 @@ function App() {
     return () => window.removeEventListener('hashchange', syncProductFromUrl);
   }, []);
 
+  useEffect(() => {
+    const preventImageContextMenu = (event) => {
+      if (event.target instanceof HTMLImageElement) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener('contextmenu', preventImageContextMenu);
+    return () => document.removeEventListener('contextmenu', preventImageContextMenu);
+  }, []);
+
   /** Filter categories based on active selection */
   const visibleCategories = activeFilter
     ? categories.filter((cat) => cat.id === activeFilter)

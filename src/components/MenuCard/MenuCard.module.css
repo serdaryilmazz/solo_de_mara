@@ -125,6 +125,12 @@
   letter-spacing: 0.02em;
 }
 
+.variantPrices {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
 .imageFallback {
   width: 100%;
   height: 100%;

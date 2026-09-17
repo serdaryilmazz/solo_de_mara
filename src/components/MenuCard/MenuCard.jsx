@@ -1,5 +1,5 @@
 import { getImagePath } from '../../utils/imageMap';
-import { formatItemPrice } from '../../utils/formatPrice';
+import { formatItemPrice, formatPrice } from '../../utils/formatPrice';
 import styles from './MenuCard.module.css';
 
 function MenuCard({ item, index = 0, isVisible = false }) {
@@ -39,8 +39,17 @@ function CardContent({ item, imageSrc }) {
       <div className={styles.body}>
         <h3 className={styles.name}>{item.name}</h3>
         {item.subtitle && <span className={styles.subtitle}>{item.subtitle}</span>}
-        {item.description && <p className={styles.description}>{item.description}</p>}
-        <p className={styles.price} aria-label={`Fiyat: ${formatItemPrice(item)}`}>{formatItemPrice(item)}</p>
+        {!item.hasDetailPage && item.description && <p className={styles.description}>{item.description}</p>}
+        <p
+          className={`${styles.price} ${item.prices?.length ? styles.variantPrices : ''}`}
+          aria-label={`Fiyat: ${formatItemPrice(item)}`}
+        >
+          {item.prices?.length
+            ? item.prices.map(({ label, amount }) => (
+              <span key={label}>{label}: {formatPrice(amount)}</span>
+            ))
+            : formatItemPrice(item)}
+        </p>
         {item.hasDetailPage && <span className={styles.detailHint}>Detayları görüntüle <span aria-hidden="true">→</span></span>}
       </div>
     </>
