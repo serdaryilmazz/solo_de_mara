@@ -10,6 +10,16 @@
       "title": "Burgerler",
       "items": [
         {
+          "id": "enos",
+          "name": "Eno's",
+          "subtitle": "Şefin imzası",
+          "description": "Tereyağlı brioche ekmeği, 120 gr. et, cheddar, kahveli BBQ sos, dilim domates, füme et ve soğan turşusu.",
+          "price": 520,
+          "allergens": ["Gluten", "Süt ürünleri", "Yumurta", "Soya"],
+          "hasDetailPage": true,
+          "image": "enos_burger.webp"
+        },
+        {
           "id": "moonche",
           "name": "Moonche",
           "subtitle": "Hikayemizin burgeri!",
@@ -23,26 +33,6 @@
           "image": "moonche_burger.webp"
         },
         {
-          "id": "kahraman",
-          "name": "Kahraman",
-          "subtitle": "Şehrimizden aldığımız ilhamla!",
-          "description": "Tereyağlı brioche ekmeği, 120 gr. et, Maraş parmak peyniri, el yapımı baharatlı patlıcanlı mayonez ve kibrit patates.",
-          "price": 460,
-          "allergens": ["Gluten", "Süt ürünleri", "Yumurta"],
-          "hasDetailPage": true,
-          "image": "kahraman_burger.webp"
-        },
-        {
-          "id": "enos",
-          "name": "Eno's",
-          "subtitle": "Şefin imzası",
-          "description": "Tereyağlı brioche ekmeği, 120 gr. et, cheddar, kahveli BBQ sos, dilim domates, füme et ve soğan turşusu.",
-          "price": 520,
-          "allergens": ["Gluten", "Süt ürünleri", "Yumurta", "Soya"],
-          "hasDetailPage": true,
-          "image": "enos_burger.webp"
-        },
-        {
           "id": "sos",
           "name": "S.O.S",
           "subtitle": "Acil yardım çağrısına hazır olun!",
@@ -51,7 +41,18 @@
           "allergens": ["Gluten", "Süt ürünleri", "Yumurta"],
           "hasDetailPage": true,
           "image": "sos_burger.webp"
+        },
+        {
+          "id": "kahraman",
+          "name": "Kahraman",
+          "subtitle": "Şehrimizden aldığımız ilhamla!",
+          "description": "Tereyağlı brioche ekmeği, 120 gr. et, Maraş parmak peyniri, el yapımı baharatlı patlıcanlı mayonez ve kibrit patates.",
+          "price": 460,
+          "allergens": ["Gluten", "Süt ürünleri", "Yumurta"],
+          "hasDetailPage": true,
+          "image": "kahraman_burger.webp"
         }
+        
       ]
     },
     {
@@ -171,14 +172,6 @@
           "image": "fusetea.webp"
         },
         {
-          "id": "maltana",
-          "name": "Maltana",
-          "subtitle": "Ananas · Şeftali",
-          "description": "",
-          "price": 90,
-          "image": "maltana.webp"
-        },
-        {
           "id": "limonata-sade",
           "name": "El Yapımı Limonata",
           "subtitle": "Sade",
@@ -201,6 +194,14 @@
           "description": "",
           "price": 110,
           "image": "karadut_limonata.webp"
+        },
+        {
+          "id": "maltana",
+          "name": "Maltana",
+          "subtitle": "Ananas · Şeftali",
+          "description": "",
+          "price": 90,
+          "image": "maltana.webp"
         },
         {
           "id": "ayran",
