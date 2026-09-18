@@ -100,8 +100,12 @@ function App() {
       />
 
       <main>
-        {visibleCategories.map((category) => (
-          <MenuSection key={category.id} category={category} />
+        {visibleCategories.map((category, index) => (
+          <MenuSection
+            key={category.id}
+            category={category}
+            initiallyVisible={index === 0}
+          />
         ))}
       </main>
 

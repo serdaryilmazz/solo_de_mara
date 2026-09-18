@@ -2,13 +2,14 @@ import MenuCard from '../MenuCard/MenuCard';
 import { useInView } from '../../hooks/useInView';
 import styles from './MenuSection.module.css';
 
-function MenuSection({ category }) {
+function MenuSection({ category, initiallyVisible = false }) {
   const [sectionRef, isInView] = useInView({ threshold: 0.05, rootMargin: '0px 0px -60px 0px' });
+  const isSectionVisible = initiallyVisible || isInView;
 
   return (
     <section
       ref={sectionRef}
-      className={`${styles.section} ${isInView ? styles.visible : ''}`}
+      className={`${styles.section} ${isSectionVisible ? styles.visible : ''}`}
       id={category.id}
       aria-label={`${category.title} menü bölümü`}
     >
@@ -22,7 +23,7 @@ function MenuSection({ category }) {
 
       <div className={styles.grid} role="list" aria-label={`${category.title} ürünleri`}>
         {category.items.map((item, index) => (
-          <MenuCard key={item.id} item={item} index={index} isVisible={isInView} />
+          <MenuCard key={item.id} item={item} index={index} isVisible={isSectionVisible} />
         ))}
       </div>
     </section>
